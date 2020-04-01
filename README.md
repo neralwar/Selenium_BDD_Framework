@@ -18,4 +18,30 @@
 4 Integration with Dev-Ops
 5 Best Practices
 ```
+&nbsp;
+&nbsp;
+&nbsp;
+### 1.Framework Overview
+
+#### 1.1 High Level Overview
+    
+
+
+#### 1.4 Test Execution Guidelines
+ 
+  * UI Script Execution : mvn verify -P <Profile Name>  i.e. mvn verify -P browserstack
+  * Rest Service Execution : mvn verify -P restservicerunner
+    
+#### 1.5 Test Execution Report
+
+**There are two options to trigger the automation execution** </br>
+        - Junit Run ( Runner File right click) </br>
+        - Command prompt ( Maven verify command) </br>
+         Serenity Report generated at *Target/Site/Serenity/index.html
+        
+          
+          
+
+
+ 
 
