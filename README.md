@@ -1,37 +1,47 @@
-# serenity-browserstack
+# IELTS - Test Automation Frameowrk Handbook
 
-[Serenity](http://www.thucydides.info/docs/serenity/) Integration with BrowserStack.
+### Table of Content
+```sh
+1 Framework Overview
+    1.1 High Level Overview
+    1.2 Technology Stack
+    1.3 Framework Components
+    1.4 Test Execution Guidelines
+    1.5 Test Execution Report
+2 Test Automation Process
+    2.1 UI Automation
+    2.2 Rest Automation
+    2.3 Contract Testing
+    2.4 Accessibility Testing
+    2.5 Security Testing
+3 Test Data Strategy
+4 Integration with Dev-Ops
+5 Best Practices
+```
+&nbsp;
+&nbsp;
+&nbsp;
+### 1.Framework Overview
 
-Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol** please checkout [selenium-4](https://github.com/browserstack/serenity-browserstack/tree/selenium-4) branch
+#### 1.1 High Level Overview
+    
 
-![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
-<img src="http://www.thucydides.info/docs/serenity/images/serenity-logo.png" height = "100">
+#### 1.4 Test Execution Guidelines
+ 
+  * UI Script Execution : mvn verify -P <Profile Name>  i.e. mvn verify -P browserstack
+  * Rest Service Execution : mvn verify -P restservicerunner
+    
+#### 1.5 Test Execution Report
 
-## Setup
-* Clone the repo
-* Install dependencies `mvn install`
-* You can setup environment variables for all sample repos (see Notes) or update `serenity.properties` file with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+**There are two options to trigger the automation execution** </br>
+        - Junit Run ( Runner File right click) </br>
+        - Command prompt ( Maven verify command) </br>
+         Serenity Report generated at *Target/Site/Serenity/index.html
+        
+          
+          
 
-## Running your tests
-- To run a single test, run `mvn verify -P single`
-- To run local tests, run `mvn verify -P local`
-- To run parallel tests, run `mvn verify -P parallel`
 
- Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+ 
 
-## Notes
-* You can view your test results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
-* To test on a different set of browsers, check out our [platform configurator](https://www.browserstack.com/automate/java#setting-os-and-browser)
-* You can export the environment variables for the Username and Access Key of your BrowserStack account
-  
-  ```
-  export BROWSERSTACK_USERNAME=<browserstack-username> &&
-  export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
-  ```
-  
-## Additional Resources
-* [Documentation for writing Automate test scripts in Java](https://www.browserstack.com/automate/java)
-* [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
-* [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=automate)
-* [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/automate/rest-api)
