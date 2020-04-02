@@ -29,6 +29,15 @@ public class HomePage extends PageObject {
 
 	@FindBy(id = "onetrust-accept-btn-handler")
 	WebElement cookiesalert;
+	
+	@FindBy(xpath = "//descendant::li[@class='select2-results__option'][7]")
+	WebElement iletscore_6;
+	@FindBy(xpath = "//descendant::li[@class='select2-results__option'][8]")
+	WebElement iletscore_7;
+	@FindBy(xpath = "//descendant::li[@class='select2-results__option'][6]")
+	WebElement iletscore_5;
+	
+	
 
 	public void acceptcookies() throws InterruptedException {
 
@@ -45,35 +54,32 @@ public class HomePage extends PageObject {
 
 		
 		iletscore.click();
-	
-
-		Robot robobj = new Robot();
-
+		
 		if (intieltsscore.trim().equals("5"))
 
 		{
-			robobj.keyPress(KeyEvent.VK_5);
+			iletscore_5.click();
 		}
 
 		else if (intieltsscore.trim().equals("6"))
 
 		{
-			robobj.keyPress(KeyEvent.VK_6);
+			iletscore_6.click();
 			
 		} else if (intieltsscore.trim().equals("7"))
 
 		{
-			robobj.keyPress(KeyEvent.VK_7);
+			iletscore_7.click();
 		}
 
-		else {
+		else 
+		
+		{
 			
-			robobj.keyPress(KeyEvent.VK_9);
+			iletscore.click();
 		}
 		
-		
-
-		robobj.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(3000);
 	}
 
 	public void searchorganization() throws InterruptedException, AWTException {
